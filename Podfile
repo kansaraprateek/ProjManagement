@@ -9,6 +9,7 @@ target 'PManagement' do
 	pod 'ReachabilitySwift', '~> 3'
     pod 'WebService'
     pod 'RealmSwift'
+    pod 'SVProgressHUD'
 
   # Pods for PManagement
 

@@ -22,6 +22,16 @@
 		FA7194791E7C0B7300B922E2 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7194781E7C0B7300B922E2 /* TaskView.swift */; };
 		FA71947C1E7C0B8400B922E2 /* AddEdiTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71947B1E7C0B8400B922E2 /* AddEdiTask.swift */; };
 		FA71947F1E7C0BB100B922E2 /* AddEditProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71947E1E7C0BB100B922E2 /* AddEditProject.swift */; };
+		FA7194831E7C0F4400B922E2 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7194821E7C0F4400B922E2 /* Extenstions.swift */; };
+		FA7194861E7C0F6100B922E2 /* ProjectURls.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7194851E7C0F6100B922E2 /* ProjectURls.swift */; };
+		FA7194881E7C0F6A00B922E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7194871E7C0F6A00B922E2 /* Constants.swift */; };
+		FA71948A1E7C0FBF00B922E2 /* PMActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7194891E7C0FBF00B922E2 /* PMActionSheet.swift */; };
+		FA71948C1E7C0FDD00B922E2 /* UtilityMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71948B1E7C0FDD00B922E2 /* UtilityMethods.swift */; };
+		FA71948F1E7C123F00B922E2 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71948E1E7C123F00B922E2 /* Database.swift */; };
+		FA7194921E7C159F00B922E2 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7194911E7C159F00B922E2 /* ProjectTableViewCell.swift */; };
+		FAC5A8C71E7C21740091C734 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5A8C61E7C21740091C734 /* TaskDetailView.swift */; };
+		FAC5A8CA1E7C21B70091C734 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5A8C91E7C21B70091C734 /* TaskTableViewCell.swift */; };
+		FAC5A8CC1E7C257F0091C734 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5A8CB1E7C257F0091C734 /* CellData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +79,16 @@
 		FA7194781E7C0B7300B922E2 /* TaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		FA71947B1E7C0B8400B922E2 /* AddEdiTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEdiTask.swift; sourceTree = "<group>"; };
 		FA71947E1E7C0BB100B922E2 /* AddEditProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditProject.swift; sourceTree = "<group>"; };
+		FA7194821E7C0F4400B922E2 /* Extenstions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
+		FA7194851E7C0F6100B922E2 /* ProjectURls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectURls.swift; sourceTree = "<group>"; };
+		FA7194871E7C0F6A00B922E2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA7194891E7C0FBF00B922E2 /* PMActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMActionSheet.swift; sourceTree = "<group>"; };
+		FA71948B1E7C0FDD00B922E2 /* UtilityMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityMethods.swift; sourceTree = "<group>"; };
+		FA71948E1E7C123F00B922E2 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		FA7194911E7C159F00B922E2 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		FAC5A8C61E7C21740091C734 /* TaskDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		FAC5A8C91E7C21B70091C734 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		FAC5A8CB1E7C257F0091C734 /* CellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,11 +169,13 @@
 			children = (
 				FA71946E1E7C0AFA00B922E2 /* App Delegate */,
 				FA71946F1E7C0B0800B922E2 /* Dashboard/Project */,
-				FA7194441E7C0AED00B922E2 /* Main.storyboard */,
+				FA7194761E7C0B6100B922E2 /* Task */,
+				FA71948D1E7C10AA00B922E2 /* Storyboard */,
 				FA7194471E7C0AED00B922E2 /* Assets.xcassets */,
 				FA7194491E7C0AED00B922E2 /* LaunchScreen.storyboard */,
 				FA71944C1E7C0AED00B922E2 /* Info.plist */,
-				FA7194761E7C0B6100B922E2 /* Task */,
+				FA7194841E7C0F4900B922E2 /* Utils */,
+				FA7194901E7C124300B922E2 /* Database */,
 			);
 			path = PManagement;
 			sourceTree = "<group>";
@@ -198,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7194421E7C0AED00B922E2 /* ViewController.swift */,
+				FA7194911E7C159F00B922E2 /* ProjectTableViewCell.swift */,
 			);
 			name = "Project View";
 			sourceTree = "<group>";
@@ -231,7 +254,8 @@
 		FA71947A1E7C0B7600B922E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FA7194781E7C0B7300B922E2 /* TaskView.swift */,
+				FAC5A8C51E7C21640091C734 /* Task List */,
+				FAC5A8C81E7C21770091C734 /* TaskDetail */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -250,6 +274,52 @@
 				FA71947E1E7C0BB100B922E2 /* AddEditProject.swift */,
 			);
 			name = "Add/Edit Project";
+			sourceTree = "<group>";
+		};
+		FA7194841E7C0F4900B922E2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FA7194821E7C0F4400B922E2 /* Extenstions.swift */,
+				FA7194851E7C0F6100B922E2 /* ProjectURls.swift */,
+				FA7194871E7C0F6A00B922E2 /* Constants.swift */,
+				FA7194891E7C0FBF00B922E2 /* PMActionSheet.swift */,
+				FA71948B1E7C0FDD00B922E2 /* UtilityMethods.swift */,
+				FAC5A8CB1E7C257F0091C734 /* CellData.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		FA71948D1E7C10AA00B922E2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FA7194441E7C0AED00B922E2 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		FA7194901E7C124300B922E2 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				FA71948E1E7C123F00B922E2 /* Database.swift */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		FAC5A8C51E7C21640091C734 /* Task List */ = {
+			isa = PBXGroup;
+			children = (
+				FA7194781E7C0B7300B922E2 /* TaskView.swift */,
+				FAC5A8C91E7C21B70091C734 /* TaskTableViewCell.swift */,
+			);
+			name = "Task List";
+			sourceTree = "<group>";
+		};
+		FAC5A8C81E7C21770091C734 /* TaskDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FAC5A8C61E7C21740091C734 /* TaskDetailView.swift */,
+			);
+			name = TaskDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,13 +603,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7194831E7C0F4400B922E2 /* Extenstions.swift in Sources */,
+				FA7194921E7C159F00B922E2 /* ProjectTableViewCell.swift in Sources */,
 				FA7194431E7C0AED00B922E2 /* ViewController.swift in Sources */,
 				FA7194411E7C0AED00B922E2 /* AppDelegate.swift in Sources */,
 				FA7194751E7C0B5D00B922E2 /* TaskModel.swift in Sources */,
 				FA71947C1E7C0B8400B922E2 /* AddEdiTask.swift in Sources */,
+				FA7194881E7C0F6A00B922E2 /* Constants.swift in Sources */,
+				FA71948A1E7C0FBF00B922E2 /* PMActionSheet.swift in Sources */,
+				FAC5A8CC1E7C257F0091C734 /* CellData.swift in Sources */,
+				FAC5A8CA1E7C21B70091C734 /* TaskTableViewCell.swift in Sources */,
+				FA7194861E7C0F6100B922E2 /* ProjectURls.swift in Sources */,
 				FA7194791E7C0B7300B922E2 /* TaskView.swift in Sources */,
 				FA71947F1E7C0BB100B922E2 /* AddEditProject.swift in Sources */,
 				FA7194721E7C0B1E00B922E2 /* ProjectModel.swift in Sources */,
+				FA71948F1E7C123F00B922E2 /* Database.swift in Sources */,
+				FA71948C1E7C0FDD00B922E2 /* UtilityMethods.swift in Sources */,
+				FAC5A8C71E7C21740091C734 /* TaskDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +870,7 @@
 				FA7194671E7C0AED00B922E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA7194681E7C0AED00B922E2 /* Build configuration list for PBXNativeTarget "PManagementTests" */ = {
 			isa = XCConfigurationList;
@@ -798,6 +879,7 @@
 				FA71946A1E7C0AED00B922E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA71946B1E7C0AED00B922E2 /* Build configuration list for PBXNativeTarget "PManagementUITests" */ = {
 			isa = XCConfigurationList;
@@ -806,6 +888,7 @@
 				FA71946D1E7C0AED00B922E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

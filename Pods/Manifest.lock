@@ -6,12 +6,14 @@ PODS:
   - Realm/Headers (2.4.4)
   - RealmSwift (2.4.4):
     - Realm (= 2.4.4)
+  - SVProgressHUD (2.1.2)
   - WebService (0.4.2)
 
 DEPENDENCIES:
   - Eureka (from `https://github.com/xmartlabs/Eureka.git`)
   - ReachabilitySwift (~> 3)
   - RealmSwift
+  - SVProgressHUD
   - WebService
 
 EXTERNAL SOURCES:
@@ -28,8 +30,9 @@ SPEC CHECKSUMS:
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
   RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   WebService: ac43ba946cb6bfff781c79bf0d4d221dbf53749e
 
-PODFILE CHECKSUM: 20f50e0064b8cfdec24e33f1f2282e1a77f721c7
+PODFILE CHECKSUM: 4496564c19016391426f4497685452a8198e5b80
 
 COCOAPODS: 1.1.1

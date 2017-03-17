@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FCB48D967A6CA145CA5264C1FF368F6F'
+               BlueprintIdentifier = '6F6B780D754E24D3574C99D9EF290185'
                BlueprintName = 'WebService'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'WebService.framework'>

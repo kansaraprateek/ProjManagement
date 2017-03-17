@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        RealmMigration()
         return true
     }
 
@@ -41,6 +43,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func RealmMigration() {
+        let config =     Realm.Configuration(
+            // Set the new schema version. This must be greater than the previously used
+            // version (if you've never set a schema version before, the version is 0).
+            schemaVersion: 2,
+            
+            // Set the block which will be called automatically when opening a Realm with
+            // a schema version lower than the one set above
+            migrationBlock: { migration, oldSchemaVersion in
+                
+                if oldSchemaVersion < 1 {
+                    
+                }
+        }
+        )
+        
+        Realm.Configuration.defaultConfiguration = config
+    }
 }
 
