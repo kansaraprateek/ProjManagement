@@ -1,0 +1,6 @@
+framework module Pods_PManagementUITests {
+  umbrella header "Pods-PManagementUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

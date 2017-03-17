@@ -1,0 +1,35 @@
+PODS:
+  - Eureka (2.0.1)
+  - ReachabilitySwift (3)
+  - Realm (2.4.4):
+    - Realm/Headers (= 2.4.4)
+  - Realm/Headers (2.4.4)
+  - RealmSwift (2.4.4):
+    - Realm (= 2.4.4)
+  - WebService (0.4.2)
+
+DEPENDENCIES:
+  - Eureka (from `https://github.com/xmartlabs/Eureka.git`)
+  - ReachabilitySwift (~> 3)
+  - RealmSwift
+  - WebService
+
+EXTERNAL SOURCES:
+  Eureka:
+    :git: https://github.com/xmartlabs/Eureka.git
+
+CHECKOUT OPTIONS:
+  Eureka:
+    :commit: 555c1b29194cde5328663097a019fd1f00e7cc97
+    :git: https://github.com/xmartlabs/Eureka.git
+
+SPEC CHECKSUMS:
+  Eureka: b40fbccd381b2b5d6a1c138d23806993a950d7d7
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
+  RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
+  WebService: ac43ba946cb6bfff781c79bf0d4d221dbf53749e
+
+PODFILE CHECKSUM: 20f50e0064b8cfdec24e33f1f2282e1a77f721c7
+
+COCOAPODS: 1.1.1
