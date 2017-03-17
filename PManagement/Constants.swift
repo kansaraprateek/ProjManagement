@@ -27,13 +27,16 @@ class constants: NSObject{
 class storyBoardID: NSObject{
     let projectCell = "projectCell"
     let taskCell = "taskCell"
+    let commentCell = "commentsCell"
     
     let addEditTasks = "AddEditTask"
+    let addEditComment = "addEditComment"
 }
 
 class PMSegues : NSObject{
     let projectDetailSegue = "projectTask"
     let taskDetailSegue = "Task Detail"
+    let addEditComment = "addEditComment"
 }
 
 /// App based Colors

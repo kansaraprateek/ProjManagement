@@ -32,6 +32,7 @@
 		FAC5A8C71E7C21740091C734 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5A8C61E7C21740091C734 /* TaskDetailView.swift */; };
 		FAC5A8CA1E7C21B70091C734 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5A8C91E7C21B70091C734 /* TaskTableViewCell.swift */; };
 		FAC5A8CC1E7C257F0091C734 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5A8CB1E7C257F0091C734 /* CellData.swift */; };
+		FAC5A8CE1E7C5AF80091C734 /* AddEditComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5A8CD1E7C5AF80091C734 /* AddEditComment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		FAC5A8C61E7C21740091C734 /* TaskDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		FAC5A8C91E7C21B70091C734 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		FAC5A8CB1E7C257F0091C734 /* CellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
+		FAC5A8CD1E7C5AF80091C734 /* AddEditComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditComment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 				FA7194771E7C0B6600B922E2 /* Model */,
 				FA71947A1E7C0B7600B922E2 /* View */,
 				FA71947D1E7C0B8900B922E2 /* Add/Edit Task */,
+				FAC5A8CF1E7C5AFC0091C734 /* Comment */,
 			);
 			name = Task;
 			sourceTree = "<group>";
@@ -320,6 +323,14 @@
 				FAC5A8C61E7C21740091C734 /* TaskDetailView.swift */,
 			);
 			name = TaskDetail;
+			sourceTree = "<group>";
+		};
+		FAC5A8CF1E7C5AFC0091C734 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				FAC5A8CD1E7C5AF80091C734 /* AddEditComment.swift */,
+			);
+			name = Comment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -616,6 +627,7 @@
 				FA7194861E7C0F6100B922E2 /* ProjectURls.swift in Sources */,
 				FA7194791E7C0B7300B922E2 /* TaskView.swift in Sources */,
 				FA71947F1E7C0BB100B922E2 /* AddEditProject.swift in Sources */,
+				FAC5A8CE1E7C5AF80091C734 /* AddEditComment.swift in Sources */,
 				FA7194721E7C0B1E00B922E2 /* ProjectModel.swift in Sources */,
 				FA71948F1E7C123F00B922E2 /* Database.swift in Sources */,
 				FA71948C1E7C0FDD00B922E2 /* UtilityMethods.swift in Sources */,

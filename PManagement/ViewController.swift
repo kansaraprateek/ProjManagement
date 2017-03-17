@@ -15,16 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet var searchBar : UISearchBar!
     
     var searchBarActive : Bool = false
-    let realm = try! Realm()
+    var realm = try? Realm()
     
     
     /// Project List ream results
     var projectList : Results<Projects>?{
         if searchBarActive{
             let predicate = NSPredicate(format : "name BEGINSWITH[c] %@ OR name CONTAINS[c] %@", searchBar.text!, searchBar.text!)
-            return realm.objects(Projects.self).filter(predicate)
+            return realm?.objects(Projects.self).filter(predicate)
         }
-        return realm.objects(Projects.self)
+        realm = try! Realm()
+        return realm?.objects(Projects.self)
     }
 
 
@@ -92,7 +93,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableView.backgroundView = nil
-        if projectList?.count == 0 {
+        if projectList == nil || projectList?.count == 0 {
             
             return 0
         }

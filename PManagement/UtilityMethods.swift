@@ -79,6 +79,4 @@ class UtilityMethods: NSObject {
         }
         return false
     }
-    
-    
 }

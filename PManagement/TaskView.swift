@@ -133,8 +133,8 @@ class TaskViewController: UIViewController {
             var selectedTasks : Tasks? = nil
             if let cell = sender as? TaskTableViewCell, let indexPath = taskTable.indexPath(for: cell){
                 selectedTasks = taskList?[indexPath.row]
-                let detailObject = segue.destination as! TaskViewController
-                
+                let detailObject = segue.destination as! TaskDetailView
+               detailObject.taskObject = selectedTasks
             }
         }else{
             let detailObject = segue.destination as! AddEditTask

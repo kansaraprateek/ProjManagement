@@ -48,7 +48,8 @@ class Comments: Object {
     
     dynamic var id : String?
     dynamic var comment : String?
-    
+    dynamic var commentBy : String?
+    dynamic var creationDate : Date?
     dynamic var operationType : String?
     
     override static func primaryKey() -> String? {

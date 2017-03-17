@@ -17,13 +17,26 @@ class cellData: NSObject {
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .right
-        paragraphStyle.lineHeightMultiple = 0.8
+    
         let statusString = NSAttributedString.init(string: String(format: "\n\n%@", taskObject.status!), attributes: [NSParagraphStyleAttributeName: paragraphStyle, NSForegroundColorAttributeName:UIColor.black, NSFontAttributeName:UIFont.init(name: PMFonts().AvenirNextMedium, size: 14.0)!])
         
         titleString.append(statusString)
         return titleString
     }
     
-    
+    func getCommentCellData(commentObject : Comments) -> NSAttributedString {
+        
+        let titleString : NSMutableAttributedString = NSMutableAttributedString.init(string: commentObject.comment!, attributes: [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName:UIFont.init(name: PMFonts().AvenirNextMedium, size: 16.0)!])
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .right
+        
+        if commentObject.commentBy != nil{
+            let byString = NSAttributedString.init(string: String(format: "\n By: %@", commentObject.commentBy!), attributes: [NSParagraphStyleAttributeName: paragraphStyle, NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName:UIFont.init(name: PMFonts().AvenirNextMedium, size: 14.0)!])
+        
+            titleString.append(byString)
+        }
+        return titleString
+    }
     
 }

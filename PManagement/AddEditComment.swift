@@ -1,5 +1,5 @@
 //
-//  AddEdiTask.swift
+//  AddEditComment.swift
 //  PManagement
 //
 //  Created by Prateek Kansara on 17/03/17.
@@ -7,24 +7,23 @@
 //
 
 import Foundation
-
 import Eureka
 import RealmSwift
 import SVProgressHUD
 
-class AddEditTask : FormViewController{
+class AddEditComment : FormViewController{
     
     let realm = try! Realm()
     
-    var GlobalTaskObject : Tasks?
-    var projectName : String?
+    var GlobalCommentObject : Comments?
+    var taskObject : Tasks!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationItemsAndRevealView()
         
         
-        initializeForm(GlobalTaskObject)
+        initializeForm(GlobalCommentObject)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,66 +51,47 @@ class AddEditTask : FormViewController{
     }
     
     
-    func initializeForm(_ taskObject : Tasks?) {
+    func initializeForm(_ commentObject : Comments?) {
         
-        if (taskObject != nil) {
-            self.title = "Edit Task"
+        if (commentObject != nil) {
+            self.title = "Edit Comment"
         }else{
-            self.title = "Add Task"
-            GlobalTaskObject = Tasks()
+            self.title = "Add Comment"
+            GlobalCommentObject = Comments()
         }
         
         let formSection = Section()
         
         form +++ formSection
             
-            <<< TextRow("title") { row in
-                row.title = "Task Title*"
-                if let name = taskObject?.title{
-                    row.value = name
+            <<< TextAreaRow("title") { row in
+                row.placeholder = "Type Comment Here*"
+                if let comment = commentObject?.comment{
+                    row.value = comment
                 }
-                row.add(rule: RuleRequired(msg: "Title Can't be empty"))
+                row.add(rule: RuleRequired(msg: "Comment Can't be empty"))
                 row.onChange({
                     row in
                     try! self.realm.write({
-                        self.GlobalTaskObject?.title = ""
+                        self.GlobalCommentObject?.comment = ""
                         if row.value != nil {
-                            self.GlobalTaskObject?.title = row.value!
+                            self.GlobalCommentObject?.comment = row.value!
                         }
                     })
                 })
             }
             
-            <<< PickerInlineRow<String>("status") { row in
-                row.title = "Status*"
-                
-                for statusValue in constants().taskStatus{
-                    row.options.append(statusValue)
-                }
-                row.value = taskObject?.status
-                row.add(rule: RuleRequired(msg: "Status Can't be empty"))
-                
-                row.onChange({
-                    row in
-                    try! self.realm.write({
-                        self.GlobalTaskObject?.status = ""
-                        if row.value != nil {
-                            self.GlobalTaskObject?.status = row.value!
-                        }
-                    })
-                })
- 
-            }
             
-            <<< TextAreaRow("description"){row in
-                row.placeholder = "Task Description"
-                row.value = taskObject?.taskDescription
+            <<< TextRow("name"){row in
+                row.title = "Name*"
+                row.value = commentObject?.commentBy
+                row.add(rule: RuleRequired(msg: "Name Can't be empty"))
                 row.onChange({
                     row in
                     try! self.realm.write({
-                        self.GlobalTaskObject?.taskDescription = ""
+                        self.GlobalCommentObject?.commentBy = ""
                         if row.value != nil {
-                            self.GlobalTaskObject?.taskDescription = row.value!
+                            self.GlobalCommentObject?.commentBy = row.value!
                         }
                     })
                 })
@@ -131,39 +111,40 @@ class AddEditTask : FormViewController{
             }
         }
         
-        var message = alertMessages().taskUpdated
+        var message = alertMessages().commentUpdate
         
         try! realm.write({
+
             
-            if projectName != nil{
-                GlobalTaskObject?.projectName = projectName
+            GlobalCommentObject?.creationDate = Date()
+            
+            if let operationType = GlobalCommentObject?.operationType{
+                GlobalCommentObject?.operationType = operationType
             }
-            
-            GlobalTaskObject?.creationDate = Date()
-            
-            if let operationType = GlobalTaskObject?.operationType{
-                GlobalTaskObject?.operationType = operationType
-            }
-            if let id = GlobalTaskObject?.id  {
+            if let id = GlobalCommentObject?.id  {
                 if id.isEmpty {
-                    GlobalTaskObject?.id = String(format: "%f", Date().timeIntervalSince1970)
-                    GlobalTaskObject?.operationType = "POST"
-                    message = alertMessages().taskAdded
+                    GlobalCommentObject?.id = String(format: "%f", Date().timeIntervalSince1970)
+                    GlobalCommentObject?.operationType = "POST"
+                    message = alertMessages().commentAdded
                 }
                 else{
-                    GlobalTaskObject?.operationType = "PUT"
+                    GlobalCommentObject?.operationType = "PUT"
                 }
             }
-            else if GlobalTaskObject?.id == nil{
-                GlobalTaskObject?.id = String(format: "%f", Date().timeIntervalSince1970)
-                GlobalTaskObject?.operationType = "POST"
-                message = alertMessages().taskAdded
+            else if GlobalCommentObject?.id == nil{
+                GlobalCommentObject?.id = String(format: "%f", Date().timeIntervalSince1970)
+                GlobalCommentObject?.operationType = "POST"
+                message = alertMessages().commentAdded
             }
             else{
-                GlobalTaskObject?.operationType = "PUT"
+                GlobalCommentObject?.operationType = "PUT"
             }
             
-            realm.add(GlobalTaskObject!, update: true)
+            if GlobalCommentObject?.operationType == "POST"{
+                taskObject.comments.append(GlobalCommentObject!)
+            }
+            
+            realm.add(GlobalCommentObject!, update: true)
         })
         
         SVProgressHUD.showSuccess(withStatus: message)
