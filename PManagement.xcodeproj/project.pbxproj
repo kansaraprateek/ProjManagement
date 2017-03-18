@@ -10,6 +10,7 @@
 		2385A40F9C2FDE1C9CB507B1 /* Pods_PManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB08CCBAAFC66927C857597 /* Pods_PManagement.framework */; };
 		70A775F8A4B35168FC114BDA /* Pods_PManagementUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42108AD723E21E2B49A3C18 /* Pods_PManagementUITests.framework */; };
 		B0C6B37D76869B91F87442B4 /* Pods_PManagementTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CEEE6D863D4CB599E88B81 /* Pods_PManagementTests.framework */; };
+		FA07CBBD1E7D966A007A2848 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07CBBC1E7D966A007A2848 /* CommentModel.swift */; };
 		FA7194411E7C0AED00B922E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7194401E7C0AED00B922E2 /* AppDelegate.swift */; };
 		FA7194431E7C0AED00B922E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7194421E7C0AED00B922E2 /* ViewController.swift */; };
 		FA7194461E7C0AED00B922E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7194441E7C0AED00B922E2 /* Main.storyboard */; };
@@ -62,6 +63,8 @@
 		C42108AD723E21E2B49A3C18 /* Pods_PManagementUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PManagementUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61EA9D2CD9C9638060F1832 /* Pods-PManagementTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PManagementTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PManagementTests/Pods-PManagementTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F03E250C23F7EA267162ABEA /* Pods-PManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PManagement/Pods-PManagement.debug.xcconfig"; sourceTree = "<group>"; };
+		FA07CBB71E7D8BBC007A2848 /* PManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PManagement-Bridging-Header.h"; sourceTree = "<group>"; };
+		FA07CBBC1E7D966A007A2848 /* CommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		FA71943D1E7C0AED00B922E2 /* PManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7194401E7C0AED00B922E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA7194421E7C0AED00B922E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +147,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA07CBBB1E7D965A007A2848 /* Add/Edit Comment */ = {
+			isa = PBXGroup;
+			children = (
+				FAC5A8CD1E7C5AF80091C734 /* AddEditComment.swift */,
+			);
+			name = "Add/Edit Comment";
+			sourceTree = "<group>";
+		};
+		FA07CBBE1E7D966F007A2848 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA07CBBC1E7D966A007A2848 /* CommentModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		FA7194341E7C0AEC00B922E2 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +195,7 @@
 				FA7194471E7C0AED00B922E2 /* Assets.xcassets */,
 				FA7194491E7C0AED00B922E2 /* LaunchScreen.storyboard */,
 				FA71944C1E7C0AED00B922E2 /* Info.plist */,
+				FA07CBB71E7D8BBC007A2848 /* PManagement-Bridging-Header.h */,
 				FA7194841E7C0F4900B922E2 /* Utils */,
 				FA7194901E7C124300B922E2 /* Database */,
 			);
@@ -328,7 +348,8 @@
 		FAC5A8CF1E7C5AFC0091C734 /* Comment */ = {
 			isa = PBXGroup;
 			children = (
-				FAC5A8CD1E7C5AF80091C734 /* AddEditComment.swift */,
+				FA07CBBE1E7D966F007A2848 /* Model */,
+				FA07CBBB1E7D965A007A2848 /* Add/Edit Comment */,
 			);
 			name = Comment;
 			sourceTree = "<group>";
@@ -410,6 +431,7 @@
 				TargetAttributes = {
 					FA71943C1E7C0AEC00B922E2 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					FA7194501E7C0AED00B922E2 = {
@@ -624,6 +646,7 @@
 				FA71948A1E7C0FBF00B922E2 /* PMActionSheet.swift in Sources */,
 				FAC5A8CC1E7C257F0091C734 /* CellData.swift in Sources */,
 				FAC5A8CA1E7C21B70091C734 /* TaskTableViewCell.swift in Sources */,
+				FA07CBBD1E7D966A007A2848 /* CommentModel.swift in Sources */,
 				FA7194861E7C0F6100B922E2 /* ProjectURls.swift in Sources */,
 				FA7194791E7C0B7300B922E2 /* TaskView.swift in Sources */,
 				FA71947F1E7C0BB100B922E2 /* AddEditProject.swift in Sources */,
@@ -784,10 +807,13 @@
 			baseConfigurationReference = F03E250C23F7EA267162ABEA /* Pods-PManagement.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prateek.com.PManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PManagement/PManagement-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -797,10 +823,12 @@
 			baseConfigurationReference = 9CC5FA3B4D492853DDAED5CD /* Pods-PManagement.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prateek.com.PManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PManagement/PManagement-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

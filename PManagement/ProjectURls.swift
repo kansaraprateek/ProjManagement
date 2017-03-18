@@ -25,6 +25,10 @@ class PMURLs : NSObject{
         return String(format: "%@/<>", baseURL)
     }
     
+    var projectDeleteURL : String{
+        return String(format: "%@/<>", baseURL)
+    }
+    
     var taskGETURL : String{
         return String(format: "%@/<>", baseURL)
     }
@@ -36,4 +40,9 @@ class PMURLs : NSObject{
     var taskUpdateURL : String{
         return String(format: "%@/<>", baseURL)
     }
+    
+    var TaskDeleteURL : String {
+        return String(format: "%@/<>", baseURL)
+    }
+    
 }

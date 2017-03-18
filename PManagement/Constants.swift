@@ -114,9 +114,11 @@ class alertMessages: NSObject {
     
     let projectAdded = "Project Created!"
     let projectUpdated = "Project Updated!"
+    let ProjectDeleteMessage = "Project Deleted!"
     
     let taskAdded = "Task Created!"
     let taskUpdated = "Task Updated!"
+    let TaskDeleteMessage = "Task Deleted!"
     
     let commentAdded = "Comment Added!"
     let commentUpdate = "Comment Updated!"

@@ -61,6 +61,20 @@ class UtilityMethods: NSObject {
     }
     
     /**
+     Method to get the current request type as HTTPMethod value
+     
+     - parameter type: String type to convert to HTTPMethod
+     
+     - returns: Return type as HTTPMethod
+     */
+    func requestType(_ type : String) -> HTTPMethod{
+        if type == "PUT" {
+            return .put
+        }
+        return .post
+    }
+    
+    /**
      Method to check weather the device is iPhone or not
      
      - returns: true or false depending upon the device type
